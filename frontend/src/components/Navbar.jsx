@@ -1,15 +1,16 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { assets } from '../assets/assets'
 import { useState } from 'react'
+import { ShopContext } from '../context/ShopContext'
+
 const NavBar = () => {
 
   
   const [visible, setVisible] = useState(false);
 
-  
-
+  const {setShowSearch} = useContext(ShopContext)
    
   return (
     <div className='flex items-center justify-between py-5 font-medium'>
@@ -37,21 +38,8 @@ const NavBar = () => {
             
         </ul>
 
-        
-        
-        
-        <div className="hidden sm:block relative w-60">
-            <input type="search" id="search-dropdown" className="block p-2.5 w-50 z-20 text-sm text-gray-900 bg-gray-50 rounded-lg border-s-2 border border-gray-300 " placeholder="Search" required />
-            <button type="submit" className="absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-white bg-gray-100 rounded-lg ">
-                <img src={assets.search_icon} className='w-5 min-w-5' alt="cart icon"/>
-            </button>
-        </div>
-       
-
-
-
-
         <div className='flex items-center gap-6'>
+            
             <div className='group relative'>
             <img src={assets.profile_icon} className='w-5 min-w-5'/>
                 <div className='group-hover:block hidden absolute dropdown-menu right-0 pt-4'>
@@ -67,6 +55,7 @@ const NavBar = () => {
                     <p className='absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-red-600 text-white aspect-square rounded-full text-[8px]'>0</p>
                                     
             </Link>
+            <img onClick={()=>setShowSearch(true)} src={assets.search_icon} className=''></img>
 
             <img onClick={()=>setVisible(true)} src={assets.menu_icon} className='w-5 cursor-pointer sm:hidden'></img>
 
