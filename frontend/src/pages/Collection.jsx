@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { ShopContext } from '../context/ShopContext';
 import ProductItem from '../components/ProductItem';
-
+import { assets } from '../assets/assets';
 
 const Collection = () => {
   const { products } = useContext(ShopContext); 
@@ -74,8 +74,18 @@ const Collection = () => {
   
   return (
     <div>
-      <div>
-        <p>Filters</p>
+      <div >
+        <div className='flex items-center justify-between py-5'>
+          <button  onClick={() => setShowFilter(!showFilter)}>
+              Filters
+          </button>
+
+          <select onChange={(e)=>setSortType(e.target.value)}>
+            <option value="relevant">Relevant</option>
+            <option value="low-high">Sort by: Low to high</option>
+            <option value="high-low">Sort by: High to low</option>
+          </select>
+        </div>  
         <div className={`${showFilter ? '' : 'hidden'}`}>
           <p>Category</p>
           <div>
@@ -100,15 +110,10 @@ const Collection = () => {
         </div>
       </div>
 
-      <button onClick={() => setShowFilter(!showFilter)}>
-        Toggle Filters
-      </button>
+      
+     
 
-      <select onChange={(e)=>setSortType(e.target.value)}>
-        <option value="relevant">Relevant</option>
-        <option value="low-high">Sort by: Low to high</option>
-        <option value="high-low">Sort by: High to low</option>
-      </select>
+      
       <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6'>
       {filterProducts.map((item, index) => (
         <ProductItem key={index} name={item.name} id={item._id} price={item.price} image={item.image} />
