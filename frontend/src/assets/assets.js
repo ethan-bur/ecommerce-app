@@ -9,6 +9,8 @@ import p_img1 from './p_img1.png'
 import p_img2 from './p_img2.png'
 import hoodie_1 from './hoodie_1.png'
 import hoodie_black_1 from './hoodie_black_1.png'
+import close_icon from './close_icon.png'
+import drop_down from './drop_down_icon.png'
 
 export const assets = {
     menu_icon,
@@ -19,7 +21,9 @@ export const assets = {
     search_icon,
     hero_stock_img,
     hoodie_1,
-    hoodie_black_1
+    hoodie_black_1,
+    close_icon,
+    drop_down
     
 }
 
