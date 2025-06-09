@@ -9,7 +9,7 @@ const Footer = () => {
           <div>
             <img src={assets.company_logo} className='w-40' alt="Company logo" />
             <p className='text-xs'>
-              Fablwe – Refining street fashion with effortless style, trendy, comfy, and bold apparel for individuals who dare to be different.
+              Fable – Refining street fashion with effortless style, trendy, comfy, and bold apparel for individuals who dare to be different.
             </p>
           </div>
           <div>
@@ -21,7 +21,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h1 className='font-bold'>Fablwe</h1>
+            <h1 className='font-bold'>Fable</h1>
             <ul>
               <li>a</li>
               <li>a</li>
@@ -29,7 +29,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h1 className='font-bold'>Fablwe Club</h1>
+            <h1 className='font-bold'>Fable Club</h1>
             <div className='border-b-1'>
               <NewsLetterSignUp />
             </div>

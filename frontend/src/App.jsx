@@ -9,7 +9,7 @@ import Orders from './pages/Orders'
 import Product from './pages/Product'
 import Cart from './pages/Cart'
 import PlaceOrder from './pages/PlaceOrder'
-import NavBar from './components/NavBar'
+import NavBar from './components/Navbar'
 import Footer from './components/Footer'
 import SearchBar from './components/SearchBar'
 

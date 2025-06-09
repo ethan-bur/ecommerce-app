@@ -8,6 +8,9 @@ import { ShopContext } from '../context/ShopContext'
 const NavBar = () => {
 
   
+  
+
+
   const [visible, setVisible] = useState(false);
 
   const {setShowSearch} = useContext(ShopContext)
